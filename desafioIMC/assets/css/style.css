@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-color: rgb(8, 184, 175);
+    --secondary-color: rgb(10, 59, 151);
+    --tertiary-color: rgb(247, 6, 6);
+    --quaternary-color: #fff;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/*Mexendo no body da página, inserindo apenas a coloração e ajustando fontes, margens e padding.*/
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--primary-color);
+    font-family: 'open sans', sans-serif;
+    font-size: 1.3em;
+    line-height: 1.5em;
+}
+
+/*Na section container, ajustamos as configurações.*/
+.container {
+    max-width: 640px;
+    margin: 50px auto; /*50px no topo e a baixo e nas laterais automático*/
+    padding: 20px;
+    background: var(--quaternary-color);
+    border-radius: 10px;
+}
+
+/*Consturção da tabela de dados do IMC*/
+.grid-info {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 50px auto;
+}
+
+.grid-info h3 {
+    margin: 15px auto;
+}
+
+.grid-info p {
+    margin: 10px auto;
+}
+
+/*mexendo nos dados do formulário*/
+
+/*Preset default de todos os dados do formulário*/
+form input, form label, form button {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+/*Formulário entrada de dados*/
+form input {
+    font-size: 24px;
+    height: 50px;
+    padding: 0 20px;
+}
+
+form input:focus {
+    outline: 1px solid var(--primary-color);
+}
+
+/*Formulário Botão*/
+form button {
+    border: none;
+    background: var(--primary-color);
+    color: var(--quaternary-color);
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    cursor: pointer;
+    margin-top: 30px;
+}
+
+form button:hover {
+    background: var(--secondary-color);
+}
+
+form button:active {
+    background: var(--tertiary-color);
+}
+
+/*estilo do resultado do IMC*/
+
+.bom-resultado {
+    background: rgb(44, 252, 182);
+    padding: 10px 10px;
+}
+
+.mal-resultado {
+    background: red ;
+    padding: 10px 10px;
+}
+
